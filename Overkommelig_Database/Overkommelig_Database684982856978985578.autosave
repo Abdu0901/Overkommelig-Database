@@ -1,0 +1,32 @@
+import de.bezier.data.sql.*;
+import de.bezier.data.sql.mapper.*;
+
+//Abdullah og Magnus DDU. Overkommelig Database Project
+
+void setup() {
+  size(600,600);
+}
+
+void draw() {
+
+}
+
+SQLite db;
+void getData()
+{
+    db = new SQLite( this, "Overkommelige-Database.sqlite" );  // open database file
+ 
+    if ( db.connect() )
+    {
+        
+          db.query("SELECT * FROM Bruger");
+        
+        while (db.next())
+        {
+            println( db.getInt("ID") );
+            println( db.getString("Username") );
+            println( db.getString("Password") );
+            
+        }
+    }
+}
