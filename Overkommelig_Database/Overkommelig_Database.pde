@@ -13,12 +13,22 @@ int textColor = 0;
 //Text that will be displayed on the button
 String buttonText;
 
+//Max text length can be inputtet
+int maxTextLength = 15;
+
 //Text that gets replaced with inputtet text in boxes and shown in them
 String stringShowName = "Hehe boi";
 String stringShowPassword = "Hehe boi";
 
+//Used in keypressed function
+String stringName = "";
+String stringPassword = "";
+
 //Defining variables needed for button check
 boolean lastMousePressed = false;
+
+//Shows which box is in focus
+boolean isAddNameButtonInFocus = false, isAddPasswordButtonInFocus = false;
 
 //Define name of a button
 Button LoadDatabaseButton;
@@ -78,6 +88,9 @@ void draw() {
   AddNameButton.Update();
   if (AddNameButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, AddNameButton) == true) {
     println("AddNameButton has been pressed");
+    RemoveBoxFocuses();
+    isAddNameButtonInFocus = true;
+    stringShowName = "";
   }
 
   //Text for Add a password 
@@ -91,8 +104,36 @@ void draw() {
   AddPasswordButton.Update();
   if (AddPasswordButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, AddPasswordButton) == true) {
     println("AddPasswordButton has been pressed");
+    RemoveBoxFocuses();
+    isAddPasswordButtonInFocus = true;
+    stringShowPassword = "";
   }
 }
+
+void keyPressed() {
+  //Makes the Box in Focus be typable
+  if (isAddNameButtonInFocus) {
+    if (maxTextLength > stringShowName.length()) {
+      stringShowName += key;
+    }
+    if ( key == ENTER || key == RETURN ) {
+      stringName =  stringShowName;
+      println( stringName );
+      RemoveBoxFocuses();
+    }
+  }
+  if (isAddPasswordButtonInFocus) {
+    if (maxTextLength > stringShowPassword.length()) {
+      stringShowPassword += key;
+    }
+    if ( key == ENTER || key == RETURN ) {
+      stringPassword =  stringShowPassword;
+      println( stringPassword );
+      RemoveBoxFocuses();
+    }
+  }
+}
+
 
 SQLite db;
 
@@ -112,4 +153,9 @@ void getData()
       println( db.getString("Password") );
     }
   }
+}
+
+void RemoveBoxFocuses() {
+  isAddNameButtonInFocus = false;
+  isAddPasswordButtonInFocus = false;
 }
