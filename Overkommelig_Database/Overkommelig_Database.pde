@@ -37,13 +37,13 @@ void draw() {
   fill(255);
   textSize(33); 
   textAlign(CENTER, TOP);
-  text("Chat 2 fags", width/2, 0);
+  text("Overkommelige Database Chat", width/2, 0);
 
   //Calculating if mouse has just been pressed
   boolean mouseJustPressed = mousePressed & !lastMousePressed;
   lastMousePressed = mousePressed;
 
-  //Text for Add a user 
+  //Text for Load database
   fill(0);
   textSize(20); 
   textAlign(LEFT, TOP);
@@ -61,16 +61,16 @@ void draw() {
   fill(0);
   textSize(20); 
   textAlign(CENTER, TOP);
-  text("Create a user", width/2, 175);
+  text("Add a user", width/2, 175);
 
-  //Text for Add a user 
+  //Text for create name
   fill(0);
   textSize(20); 
   textAlign(LEFT, TOP);
   text("Create Name:", 25, 225);
 
   //Add a Name Button
-  AddNameButton = new Button(25, 250, 250, 50, strokeColor, textColor, "Add Name", 15, 0, bRed, bGreen, bBlue);
+  AddNameButton = new Button(25, 250, 250, 50, strokeColor, textColor, "", 15, 0, bRed, bGreen, bBlue);
   AddNameButton.Update();
   if (AddNameButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, AddNameButton) == true) {
     println("AddNameButton has been pressed");
@@ -83,7 +83,7 @@ void draw() {
   text("Create Password:", 325, 225);
 
   //Add a Password Button
-  AddPasswordButton = new Button(325, 250, 250, 50, strokeColor, textColor, "Add Password", 15, 0, bRed, bGreen, bBlue);
+  AddPasswordButton = new Button(325, 250, 250, 50, strokeColor, textColor, "", 15, 0, bRed, bGreen, bBlue);
   AddPasswordButton.Update();
   if (AddPasswordButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, AddPasswordButton) == true) {
     println("AddPasswordButton has been pressed");
