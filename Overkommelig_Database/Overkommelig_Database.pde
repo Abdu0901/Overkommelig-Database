@@ -17,7 +17,7 @@ String buttonText;
 boolean lastMousePressed = false;
 
 //Define name of a button
-Button ButtonName;
+Button LoadDatabaseButton;
 
 
 void setup() {
@@ -32,11 +32,11 @@ void draw() {
   boolean mouseJustPressed = mousePressed & !lastMousePressed;
   lastMousePressed = mousePressed;
 
-  //ButtonName
-  ButtonName = new Button(100, 100, 100, 50, strokeColor, textColor, "Button Name", 15, 0, bRed, bGreen, bBlue);
-  ButtonName.Update();
-  if (ButtonName.isButtonPressed(mouseX, mouseY, mouseJustPressed, ButtonName) == true) {
-    println("ButtonName has been pressed");
+  //LoadDatabaseButton
+  LoadDatabaseButton = new Button(100, 100, 100, 50, strokeColor, textColor, "Load Data", 15, 0, bRed, bGreen, bBlue);
+  LoadDatabaseButton.Update();
+  if (LoadDatabaseButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, LoadDatabaseButton) == true) {
+    println("LoadDatabaseButton has been pressed");
     getData();
   }
 }
