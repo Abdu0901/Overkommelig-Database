@@ -13,6 +13,10 @@ int textColor = 0;
 //Text that will be displayed on the button
 String buttonText;
 
+//Text that gets replaced with inputtet text in boxes and shown in them
+String stringShowName = "Hehe boi";
+String stringShowPassword = "Hehe boi";
+
 //Defining variables needed for button check
 boolean lastMousePressed = false;
 
@@ -70,7 +74,7 @@ void draw() {
   text("Create Name:", 25, 225);
 
   //Add a Name Button
-  AddNameButton = new Button(25, 250, 250, 50, strokeColor, textColor, "", 15, 0, bRed, bGreen, bBlue);
+  AddNameButton = new Button(25, 250, 250, 50, strokeColor, textColor, stringShowName, 15, 2, bRed, bGreen, bBlue);
   AddNameButton.Update();
   if (AddNameButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, AddNameButton) == true) {
     println("AddNameButton has been pressed");
@@ -83,7 +87,7 @@ void draw() {
   text("Create Password:", 325, 225);
 
   //Add a Password Button
-  AddPasswordButton = new Button(325, 250, 250, 50, strokeColor, textColor, "", 15, 0, bRed, bGreen, bBlue);
+  AddPasswordButton = new Button(325, 250, 250, 50, strokeColor, textColor, stringShowPassword, 15, 2, bRed, bGreen, bBlue);
   AddPasswordButton.Update();
   if (AddPasswordButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, AddPasswordButton) == true) {
     println("AddPasswordButton has been pressed");
