@@ -39,3 +39,23 @@ void draw() {
     println("ButtonName has been pressed");
   }
 }
+
+SQLite db;
+void getData()
+{
+    db = new SQLite( this, "Overkommelige-Database.sqlite" );  // open database file
+ 
+    if ( db.connect() )
+    {
+        
+          db.query("SELECT * FROM Bruger");
+        
+        while (db.next())
+        {
+            println( db.getInt("ID") );
+            println( db.getString("Username") );
+            println( db.getString("Password") );
+            
+        }
+    }
+}
