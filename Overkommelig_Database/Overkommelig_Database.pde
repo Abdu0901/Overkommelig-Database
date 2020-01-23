@@ -28,12 +28,21 @@ void draw() {
   //BackGround color of the screen
   background(255);
 
+  //Title Box
+  fill (0, 0, 255);
+  rect(0, 0, width, 40);
+  //Title of the program at the top of the screen
+  fill(255);
+  textSize(33); 
+  textAlign(CENTER, TOP);
+  text("Overkommelige Database", width/2, 0);
+
   //Calculating if mouse has just been pressed
   boolean mouseJustPressed = mousePressed & !lastMousePressed;
   lastMousePressed = mousePressed;
 
   //LoadDatabaseButton
-  LoadDatabaseButton = new Button(100, 100, 100, 50, strokeColor, textColor, "Load Data", 15, 0, bRed, bGreen, bBlue);
+  LoadDatabaseButton = new Button(25, 75, 100, 50, strokeColor, textColor, "Load Data", 15, 0, bRed, bGreen, bBlue);
   LoadDatabaseButton.Update();
   if (LoadDatabaseButton.isButtonPressed(mouseX, mouseY, mouseJustPressed, LoadDatabaseButton) == true) {
     println("LoadDatabaseButton has been pressed");
