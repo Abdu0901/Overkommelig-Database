@@ -45,7 +45,7 @@ SQLite db;
 
 void getData()
 {
-  db = new SQLite( this, "Overkommelige-Database.sqlite" );  // open database file
+  db = new SQLite( this, "Overkommelige-Database.db" );  // open database file
 
   if ( db.connect() )
   {
