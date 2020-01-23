@@ -1,4 +1,4 @@
-//Abdullah og Magnus DDU. Overkommelig Database Project
+//Abdullah, Jens og Magnus DDU. Overkommelig Database Project
 
 //Import of libraries
 import de.bezier.data.sql.*;
