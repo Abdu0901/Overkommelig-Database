@@ -3,8 +3,12 @@
 //Import of libraries
 import de.bezier.data.sql.*;
 import de.bezier.data.sql.mapper.*;
+ArrayList<Bruger> Brugere = new ArrayList<bruger>();
 
+//Bruger = ID, Username, Password 
+//Brugere.add(new Bruger(" ID ",  "Username",  "Username"));
 //Color of the box stroke
+
 int strokeColor = 0;
 //Box Colors
 int bRed = 150, bGreen = 150, bBlue = 150;
