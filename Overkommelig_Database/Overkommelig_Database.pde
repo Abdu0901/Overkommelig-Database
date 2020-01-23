@@ -37,13 +37,14 @@ void draw() {
   ButtonName.Update();
   if (ButtonName.isButtonPressed(mouseX, mouseY, mouseJustPressed, ButtonName) == true) {
     println("ButtonName has been pressed");
+    getData();
   }
 }
 
 SQLite db;
 void getData()
 {
-    db = new SQLite( this, "Overkommelige-Database.sqlite" );  // open database file
+    db = new SQLite( this, "Overkommelige-Database" );  // open database file
  
     if ( db.connect() )
     {
