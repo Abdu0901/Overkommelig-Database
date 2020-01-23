@@ -37,7 +37,7 @@ void draw() {
   fill(255);
   textSize(33); 
   textAlign(CENTER, TOP);
-  text("Overkommelige Database", width/2, 0);
+  text("Chat 2 fags", width/2, 0);
 
   //Calculating if mouse has just been pressed
   boolean mouseJustPressed = mousePressed & !lastMousePressed;
