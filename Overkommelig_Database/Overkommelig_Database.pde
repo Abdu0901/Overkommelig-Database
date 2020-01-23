@@ -27,11 +27,11 @@ void setup() {
 void draw() {
   //BackGround color of the screen
   background(255);
-  
+
   //Calculating if mouse has just been pressed
   boolean mouseJustPressed = mousePressed & !lastMousePressed;
   lastMousePressed = mousePressed;
-  
+
   //ButtonName
   ButtonName = new Button(100, 100, 100, 50, strokeColor, textColor, "Button Name", 15, 0, bRed, bGreen, bBlue);
   ButtonName.Update();
@@ -41,21 +41,21 @@ void draw() {
 }
 
 SQLite db;
+
 void getData()
 {
-    db = new SQLite( this, "Overkommelige-Database.sqlite" );  // open database file
- 
-    if ( db.connect() )
+  db = new SQLite( this, "Overkommelige-Database.sqlite" );  // open database file
+
+  if ( db.connect() )
+  {
+
+    db.query("SELECT * FROM Bruger");
+
+    while (db.next())
     {
-        
-          db.query("SELECT * FROM Bruger");
-        
-        while (db.next())
-        {
-            println( db.getInt("ID") );
-            println( db.getString("Username") );
-            println( db.getString("Password") );
-            
-        }
+      println( db.getInt("ID") );
+      println( db.getString("Username") );
+      println( db.getString("Password") );
     }
+  }
 }
