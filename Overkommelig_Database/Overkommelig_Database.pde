@@ -119,6 +119,7 @@ void keyPressed() {
     if ( key == ENTER || key == RETURN ) {
       stringName =  stringShowName;
       println( stringName );
+//      EdgyJoke();
       RemoveBoxFocuses();
     }
   }
@@ -137,8 +138,7 @@ void keyPressed() {
 
 SQLite db;
 
-void getData()
-{
+void getData() {
   db = new SQLite( this, "Overkommelige-Database.db" );  // open database file
 
   if ( db.connect() )
@@ -146,8 +146,8 @@ void getData()
 
     db.query("SELECT * FROM Bruger");
 
-    while (db.next())
-    {
+    while (db.next()) {
+
       println( db.getInt("ID") );
       println( db.getString("Username") );
       println( db.getString("Password") );
@@ -159,3 +159,8 @@ void RemoveBoxFocuses() {
   isAddNameButtonInFocus = false;
   isAddPasswordButtonInFocus = false;
 }
+
+/*void EdgyJoke() {
+  db.query ("update Username From Bruger to " stringName);
+
+}*/
