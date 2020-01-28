@@ -1,5 +1,5 @@
 
-void Bruger() {
+class Bruger {
   
   int ID;
   String  Username;
