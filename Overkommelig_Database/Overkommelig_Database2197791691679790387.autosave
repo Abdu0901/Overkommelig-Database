@@ -3,7 +3,7 @@
 //Import of libraries
 import de.bezier.data.sql.*;
 import de.bezier.data.sql.mapper.*;
-ArrayList<Bruger> Users = new ArrayList <Bruger>();
+ArrayList<Bruger> Brugere = new ArrayList<Bruger>();
 
 //Bruger = ID, Username, Password 
 //Brugere.add(new Bruger(" ID ",  "Username",  "Username"));
@@ -123,7 +123,7 @@ void keyPressed() {
     if ( key == ENTER || key == RETURN ) {
       stringName =  stringShowName;
       println( stringName );
-      //      EdgyJoke();
+//      EdgyJoke();
       RemoveBoxFocuses();
     }
   }
@@ -151,8 +151,10 @@ void getData() {
     db.query("SELECT * FROM Bruger");
 
     while (db.next()) {
-      println( "User ID = " + db.getInt("ID") + "   Username = " + db.getString("Username")+ "   Password ="  + db.getString("Password") );
 
+      println( db.getInt("ID") );
+      println( db.getString("Username") );
+      println( db.getString("Password") );
     }
   }
 }
@@ -162,12 +164,8 @@ void RemoveBoxFocuses() {
   isAddPasswordButtonInFocus = false;
 }
 
-/*
 void EdgyJoke() {
-  int i = 0;
+  int i;
+  db.query ("INSERT INTO" Bruger(i++, stringName, stringPassword));
 
-  for (0 < BrugerID, i++) {
-    db.query ("INSERT INTO" Bruger(i++, stringName, stringPassword));
-  }
 }
-*/
