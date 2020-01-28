@@ -165,6 +165,7 @@ void RemoveBoxFocuses() {
 }
 
 void EdgyJoke() {
-  db.query ("INSERT INTO Username From Bruger to " stringName);
+  int i;
+  db.query ("INSERT INTO" Bruger(i++, stringName, stringPassword));
 
 }
