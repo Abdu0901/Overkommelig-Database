@@ -3,7 +3,7 @@
 //Import of libraries
 import de.bezier.data.sql.*;
 import de.bezier.data.sql.mapper.*;
-//ArrayList<Bruger> Brugere = new ArrayList<bruger>();
+ArrayList<Bruger> Brugere = new ArrayList<bruger>();
 
 //Bruger = ID, Username, Password 
 //Brugere.add(new Bruger(" ID ",  "Username",  "Username"));
