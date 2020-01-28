@@ -161,13 +161,3 @@ void RemoveBoxFocuses() {
   isAddNameButtonInFocus = false;
   isAddPasswordButtonInFocus = false;
 }
-
-/*
-void EdgyJoke() {
-  int i = 0;
-
-  for (0 < BrugerID, i++) {
-    db.query ("INSERT INTO" Bruger(i++, stringName, stringPassword));
-  }
-}
-*/
