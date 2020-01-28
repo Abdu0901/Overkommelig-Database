@@ -1,8 +1,15 @@
 
 void Bruger() {
-  int ID;
-  boolean Username;
-  boolean Password;
   
-  Bruger(ID, Username, Password);
+  int ID;
+  String  Username;
+  String Password;
+  
+  Bruger (int i, String u, String p) {
+   ID = i;
+   Username = u;
+   Password = p;
+    
+  }
+  
 }
