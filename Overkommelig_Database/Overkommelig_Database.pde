@@ -3,7 +3,7 @@
 //Import of libraries
 import de.bezier.data.sql.*;
 import de.bezier.data.sql.mapper.*;
-ArrayList<Bruger> Brugere = new ArrayList<bruger>();
+//ArrayList<Bruger> Brugere = new ArrayList<bruger>();
 
 //Bruger = ID, Username, Password 
 //Brugere.add(new Bruger(" ID ",  "Username",  "Username"));
@@ -164,7 +164,7 @@ void RemoveBoxFocuses() {
   isAddPasswordButtonInFocus = false;
 }
 
-/*void EdgyJoke() {
-  db.query ("update Username From Bruger to " stringName);
+void EdgyJoke() {
+  db.query ("INSERT INTO Username From Bruger to " stringName);
 
-}*/
+}
