@@ -151,10 +151,8 @@ void getData() {
     db.query("SELECT * FROM Bruger");
 
     while (db.next()) {
+      println( "User ID = " + db.getInt("ID") + "   Username = " + db.getString("Username")+ "   Password ="  + db.getString("Password") );
 
-      println( db.getInt("ID") );
-      println( db.getString("Username") );
-      println( db.getString("Password") );
     }
   }
 }
