@@ -123,7 +123,7 @@ void keyPressed() {
     if ( key == ENTER || key == RETURN ) {
       stringName =  stringShowName;
       println( stringName );
-//      EdgyJoke();
+      //      EdgyJoke();
       RemoveBoxFocuses();
     }
   }
@@ -166,8 +166,10 @@ void RemoveBoxFocuses() {
 
 /*
 void EdgyJoke() {
-  int i;
-  db.query ("INSERT INTO" Bruger(i++, stringName, stringPassword));
+  int i = 0;
 
+  for (0 < BrugerID, i++) {
+    db.query ("INSERT INTO" Bruger(i++, stringName, stringPassword));
+  }
 }
 */
